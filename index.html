@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test de Orientación Vocacional</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+			margin: 20px;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		form {
+			max-width: 700px;
+			margin: 0 auto;
+		}
+
+		.question {
+			margin-bottom: 20px;
+		}
+
+			.question h3 {
+				margin-bottom: 10px;
+			}
+
+		button {
+			display: block;
+			margin: 20px auto;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+		}
+
+			button:hover {
+				background-color: #45a049;
+			}
+
+		#result {
+			text-align: center;
+			font-size: 1.2em;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Test de Orientación Vocacional</h1>
+	<form id="testForm">
+		<!-- Pregunta 1 -->
+		<div class="question">
+			<h3>1. ¿Prefieres trabajar con personas o con objetos?</h3>
+			<label>
+				<input type="radio" name="q1" value="personas"> Personas
+			</label><br>
+			<label>
+				<input type="radio" name="q1" value="objetos"> Objetos
+			</label>
+		</div>
+
+		<!-- Pregunta 2 -->
+		<div class="question">
+			<h3>2. ¿Te gustan las actividades creativas o analíticas?</h3>
+			<label>
+				<input type="radio" name="q2" value="creativas"> Creativas
+			</label><br>
+			<label>
+				<input type="radio" name="q2" value="analiticas"> Analíticas
+			</label>
+		</div>
+
+		<!-- Pregunta 3 -->
+		<div class="question">
+			<h3>3. ¿Te sientes cómodo trabajando en equipo?</h3>
+			<label>
+				<input type="radio" name="q3" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q3" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 4 -->
+		<div class="question">
+			<h3>4. ¿Te interesa la ciencia y la tecnología?</h3>
+			<label>
+				<input type="radio" name="q4" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q4" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 5 -->
+		<div class="question">
+			<h3>5. ¿Te gustaría enseñar a otros?</h3>
+			<label>
+				<input type="radio" name="q5" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q5" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 6 -->
+		<div class="question">
+			<h3>6. ¿Prefieres trabajos que requieran precisión o creatividad?</h3>
+			<label>
+				<input type="radio" name="q6" value="precision"> Precisión
+			</label><br>
+			<label>
+				<input type="radio" name="q6" value="creatividad"> Creatividad
+			</label>
+		</div>
+
+		<!-- Pregunta 7 -->
+		<div class="question">
+			<h3>7. ¿Te gustaría trabajar con animales?</h3>
+			<label>
+				<input type="radio" name="q7" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q7" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 8 -->
+		<div class="question">
+			<h3>8. ¿Disfrutas aprender sobre historia o filosofía?</h3>
+			<label>
+				<input type="radio" name="q8" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q8" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 9 -->
+		<div class="question">
+			<h3>9. ¿Te interesa el trabajo en el ámbito de la salud?</h3>
+			<label>
+				<input type="radio" name="q9" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q9" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 10 -->
+		<div class="question">
+			<h3>10. ¿Te interesa la gestión de negocios y la administración?</h3>
+			<label>
+				<input type="radio" name="q10" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q10" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 11 -->
+		<div class="question">
+			<h3>11. ¿Disfrutas de las actividades al aire libre?</h3>
+			<label>
+				<input type="radio" name="q11" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q11" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 12 -->
+		<div class="question">
+			<h3>12. ¿Te gustaría trabajar en diseño o moda?</h3>
+			<label>
+				<input type="radio" name="q12" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q12" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 13 -->
+		<div class="question">
+			<h3>13. ¿Te atrae el campo de la tecnología informática?</h3>
+			<label>
+				<input type="radio" name="q13" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q13" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 14 -->
+		<div class="question">
+			<h3>14. ¿Te gustaría trabajar con niños o jóvenes?</h3>
+			<label>
+				<input type="radio" name="q14" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q14" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 15 -->
+		<div class="question">
+			<h3>15. ¿Te gustaría viajar mucho por trabajo?</h3>
+			<label>
+				<input type="radio" name="q15" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q15" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 16 -->
+		<div class="question">
+			<h3>16. ¿Te interesa el arte y las expresiones artísticas?</h3>
+			<label>
+				<input type="radio" name="q16" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q16" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 17 -->
+		<div class="question">
+			<h3>17. ¿Te gustaría trabajar con tecnología avanzada (robotica, inteligencia artificial)?</h3>
+			<label>
+				<input type="radio" name="q17" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q17" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 18 -->
+		<div class="question">
+			<h3>18. ¿Te gustaría ser emprendedor/a?</h3>
+			<label>
+				<input type="radio" name="q18" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q18" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 19 -->
+		<div class="question">
+			<h3>19. ¿Te gustaría ser parte de una organización sin fines de lucro?</h3>
+			<label>
+				<input type="radio" name="q19" value="si"> Sí
+			</label><br>
+			<label>
+				<input type="radio" name="q19" value="no"> No
+			</label>
+		</div>
+
+		<!-- Pregunta 20 -->
+		<div class="question">
+			<h3>20. ¿Prefieres trabajar en un entorno estructurado o más flexible?</h3>
+			<label>
+				<input type="radio" name="q20" value="estructurado"> Estructurado
+			</label><br>
+			<label>
+				<input type="radio" name="q20" value="flexible"> Flexible
+			</label>
+		</div>
+
+		<button type="button" onclick="calculateResult()">Enviar Respuestas</button>
+	</form>
+
+	<div id="result"></div>
+
+	<script>
+		function calculateResult() {
+			var answers = [];
+			var score = 0;
+			var resultText = "";
+
+			// Recolectar respuestas
+			for (var i = 1; i <= 20; i++) {
+				var answer = document.querySelector('input[name="q' + i + '"]:checked');
+				if (answer) {
+					answers.push(answer.value);
+				}
+			}
+
+			// Asegurarse de que todas las preguntas sean respondidas
+			if (answers.length < 20) {
+				alert("Por favor, responde todas las preguntas.");
+				return;
+			}
+
+			// Calcular el resultado basado en las respuestas
+			for (var j = 0; j < answers.length; j++) {
+				if (answers[j] === "si") {
+					score++;
+				}
+			}
+
+			// Interpretar el resultado basado en el puntaje
+			if (score >= 16) {
+				resultText = "¡Eres una persona con grandes habilidades para liderar y comunicarte! Podrías tener éxito en campos como la gestión de negocios, la enseñanza o el trabajo social.";
+			} else if (score >= 12) {
+				resultText = "Te interesan áreas como la ciencia, la tecnología y la salud. Podrías considerar una carrera en ingeniería, medicina o investigación.";
+			} else {
+				resultText = "Te atraen áreas creativas o artísticas, como el diseño, la moda o el arte. Tal vez debas explorar esas opciones.";
+			}
+
+			// Mostrar resultado
+			document.getElementById("result").innerHTML = resultText;
+		}
+	</script>
+</body>
+</html>
