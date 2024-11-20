@@ -52,6 +52,31 @@
         .submit-btn:hover {
             background-color: #45a049;
         }
+        .result-container {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .result-container p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .result-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .result-container button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -90,6 +115,12 @@
 
         <button type="button" class="submit-btn" onclick="calcularResultado()">Enviar Respuestas</button>
     </form>
+
+    <!-- Resultado -->
+    <div class="result-container" id="resultContainer">
+        <p id="resultText"></p>
+        <button onclick="cerrarFormulario()">Aceptar</button>
+    </div>
 </div>
 
 <script>
@@ -113,9 +144,16 @@
             resultado = "Tal vez una carrera en humanidades o arte sea lo tuyo.";
         }
 
-        // Mostrar el resultado en un alert y cerrar la ventana
-        alert(resultado);
-        window.close(); // Esto cierra la ventana del navegador
+        // Mostrar el resultado y ocultar el formulario
+        document.getElementById('resultText').innerText = resultado;
+        document.getElementById('testForm').style.display = 'none'; // Ocultar el formulario
+        document.getElementById('resultContainer').style.display = 'block'; // Mostrar el resultado
+    }
+
+    function cerrarFormulario() {
+        // Aquí puedes hacer lo que quieras, por ejemplo, redirigir a otra página o cerrar el formulario
+        alert("Gracias por realizar el test.");
+        window.location.reload(); // Esto recarga la página
     }
 </script>
 
